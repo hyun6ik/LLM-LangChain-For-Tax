@@ -1,3 +1,4 @@
 /.python-version
 .env
 test.ipynb
+__pycache__/llm.cpython-310.pyc
