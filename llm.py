@@ -33,7 +33,6 @@ def get_ai_response(user_message):
     prompt = ChatPromptTemplate.from_template(f"""
         사용자의 질문을 보고, 우리의 사전을 참고해서 사용자의 질문을 변경해주세요.
         만약 변경할 필요가 없다고 판단된다면, 사용자의 질문을 변경하지 않아도 됩니다.
-        변경이 필요한 경우에만 질문만 리턴해주세요 변경이 필요 없다면 질문은 리턴해주지 않으셔도 됩니다.
         사전: {dictionary}
 
         질문: {{question}}                                      
