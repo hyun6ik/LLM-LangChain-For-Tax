@@ -106,9 +106,13 @@ def get_ai_response(user_message):
     rag_chain = get_rag_chain()
     tax_chain = {"input" : dictionary_chain} | rag_chain
 
-    ai_message = tax_chain.invoke(
-        {"question": user_message},
-        config={"configurable": {"session_id": "hyun6ik"}}
+    ai_response = tax_chain.stream(
+        {
+            "question": user_message
+        },
+        config={
+            "configurable": {"session_id": "abc123"}
+        },
     )
 
-    return ai_message
+    return ai_response
